@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="android-parallel" parallel="tests">
+
+
+    <test name="AndroidAppTest 1">
+        <parameter name="platform" value="Android" />
+        <parameter name="device" value="Pixel 3" />
+        <classes>
+            <class name="AndroidApp" />
+        </classes>
+    </test>
+
+    <test name="AndroidAppTest 2">
+        <parameter name="platform" value="Android" />
+        <parameter name="device" value="Pixel 4" />
+        <classes>
+            <class name="AndroidApp" />
+        </classes>
+    </test>
+</suite>
