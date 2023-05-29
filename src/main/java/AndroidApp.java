@@ -17,14 +17,14 @@ public class AndroidApp {
     public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
 
    // AppiumDriver driver;
-    protected static ThreadLocal<AppiumDriver> threadLocalDriver = new ThreadLocal<AppiumDriver>();
+    protected static ThreadLocal<AppiumDriver> threadLocalDriver = new ThreadLocal<>();
 
 
     @BeforeTest
     @org.testng.annotations.Parameters(value = {"device", "platform"})
     public void setUp(String device, String platform) throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("build","Java TestNG Android");
+        capabilities.setCapability("build","Threadlocal sample");
         capabilities.setCapability("name",platform+" "+device);
         capabilities.setCapability("deviceName", device);
         capabilities.setCapability("platformName", platform);
@@ -32,6 +32,8 @@ public class AndroidApp {
         capabilities.setCapability("app", "proverbial-android"); //Enter your app url
         capabilities.setCapability("deviceOrientation", "PORTRAIT");
         capabilities.setCapability("geoLocation", "IN");
+
+
 
         String hub = "https://" + userName + ":" + accessKey + gridURL;
         AppiumDriver driver = new AppiumDriver(new URL(hub), capabilities);
