@@ -1,19 +1,8 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
 jobs:
-    test-tunnel:
-        runs-on: ubuntu-latest
-        steps:
-            # ...
-            -name: Start Tunnel
-             uses: LambdaTest/LambdaTest-tunnel-action@v1
-             id: tunnel
-             with:
-               user: ${{ secrets.LT_EMAIL }}
-               accessKey: ${{ secrets.LT_ACCESS_KEY }}
-               tunnelName: "testTunnel"
-            - run: mvn test
-            - name: Export Tunnel Logs for debugging
-              uses: actions/upload-artifact@v2
-              with:
-                name: tunnel_logs
-                path: ${{ steps.tunnel.outputs.logFileName }}
-            # ...
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: mvn test
