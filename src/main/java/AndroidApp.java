@@ -15,7 +15,7 @@ public class AndroidApp {
             "accessKey" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
 
     String builName = System.getenv("LT_BUILD_NAME") == null ?
-            "accessKey" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
+            "accessKey" : System.getenv("LT_BUILD_NAME"); //Add accessKey here
 
     public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
 
