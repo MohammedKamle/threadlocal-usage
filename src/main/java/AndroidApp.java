@@ -14,6 +14,9 @@ public class AndroidApp {
     String accessKey = System.getenv("LT_ACCESS_KEY") == null ?
             "accessKey" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
 
+    String builName = System.getenv("LT_BUILD_NAME") == null ?
+            "accessKey" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
+
     public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
 
    // AppiumDriver driver;
@@ -24,7 +27,7 @@ public class AndroidApp {
     @org.testng.annotations.Parameters(value = {"device", "platform"})
     public void setUp(String device, String platform) throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("build","Threadlocal sample");
+        capabilities.setCapability("build",builName);
         capabilities.setCapability("name",platform+" "+device);
         capabilities.setCapability("deviceName", device);
         capabilities.setCapability("platformName", platform);
