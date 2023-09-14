@@ -20,7 +20,7 @@ steps:
     connection: 'lt-service'
     isTunnelActivate: false
     isAppAutomate: true
-    isSmartUI: false
+    isSmartUI: true
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
