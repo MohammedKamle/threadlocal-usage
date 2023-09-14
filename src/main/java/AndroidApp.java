@@ -9,11 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 public class AndroidApp {
 
-    String userName = System.getenv("LT_USERNAME") == null ?
-            "username" : System.getenv("LT_USERNAME"); //Add username here
-    String accessKey = System.getenv("LT_ACCESS_KEY") == null ?
-            "accessKey" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
-
+    String userName = "mohammadk";
+    String accessKey = "rakcBoBYHiy8BW7osVi4N1LGYjgJhRfAwvL1pPUvwCA1wfNChd";
     String builName = System.getenv("LT_BUILD_NAME") == null ?
             "accessKey" : System.getenv("LT_BUILD_NAME"); //Add accessKey here
 
