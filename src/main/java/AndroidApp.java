@@ -24,7 +24,7 @@ public class AndroidApp {
     @org.testng.annotations.Parameters(value = {"device", "platform"})
     public void setUp(String device, String platform) throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("build",builName);
+        capabilities.setCapability("build",System.getenv("LT_BUILD_NAME"));
         capabilities.setCapability("name",platform+" "+device);
         capabilities.setCapability("deviceName", device);
         capabilities.setCapability("platformName", platform);
