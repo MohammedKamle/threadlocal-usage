@@ -7,10 +7,6 @@
 trigger:
 - main
 
-variables:
-- name: LT_BUILD_NAME
-  value: azure-sample 
-
 pool:
   vmImage: ubuntu-latest
 
