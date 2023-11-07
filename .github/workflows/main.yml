@@ -1,8 +1,24 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} iss testing out GitHub Actions 🚀
-on: [push]
+name: Maven Test on Main
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  Explore-GitHub-Actions:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - run: mvn test
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Java
+      uses: actions/setup-java@v2
+      with:
+        java-version: 'adopt@1'
+
+    - name: Build and Test
+      run: |
+        mvn test
+
