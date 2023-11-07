@@ -19,5 +19,10 @@ jobs:
         distribution: 'temurin'
         java-version: '17'  # Specify the desired Java distribution
 
+    - name: Set Environment Variables
+      run: |
+         export LT_ACCESS_KEY=rakcBoBYHiy8BW7osVi4N1LGYjgJhRfAwvL1pPUvwCA1wfNChd
+         export LT_USERNAME=mohammadk
+
     - name: Build and Test
       run: mvn test
