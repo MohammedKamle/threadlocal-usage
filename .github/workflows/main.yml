@@ -20,5 +20,4 @@ jobs:
         java-version: '17'  # Specify the desired Java distribution
 
     - name: Build and Test
-      run: |
-        mvn test
+      run: mvn test
