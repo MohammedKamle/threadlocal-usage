@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 public class AndroidApp {
 
-    String userName = "mohammadk";
-    String accessKey = "rakcBoBYHiy8BW7osVi4N1LGYjgJhRfAwvL1pPUvwCA1wfNChd";
+    String userName = "";
+    String accessKey = "";
 
     public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
 
